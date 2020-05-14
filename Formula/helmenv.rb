@@ -9,7 +9,7 @@ class Helmenv < Formula
   def install
     ENV.prepend "CGO_ENABLED", "0"
     system "go", "build", "-a", "-o", "helmenv.bin", "helmenv/main.go"
-    bin.install "helmenv.bin" => "#{prefix}/helmenv"
+    bin.install "helmenv.bin" => "#{bin}/helmenv"
   end
 
   test do
