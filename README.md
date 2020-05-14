@@ -1,4 +1,4 @@
-# Little-angry-clouds Brew Formaulas
+# Little-angry-clouds Brew Formulas
 
 ## How do I install these formulae?
 `brew install little-angry-clouds/my-brews/`
