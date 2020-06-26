@@ -4,7 +4,7 @@ class Helmenv < Formula
   url "https://github.com/little-angry-clouds/kubernetes-binaries-managers/archive/0.2.0.tar.gz"
   sha256 "2712b58f08dc8d0445038f2dfc6232831eb518eacf18b73aca3ad38d7f0b6daf"
 
-  depends_on "go1144" => :build
+  depends_on "go" => :build
 
   def install
     ENV.prepend "CGO_ENABLED", "0"
