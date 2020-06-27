@@ -1,8 +1,8 @@
 class Kbenv < Formula
   desc "Kubectl version manager inspired by tfenv"
   homepage "https://github.com/little-angry-clouds/kubernetes-binaries-managers/"
-  url "https://github.com/little-angry-clouds/kubernetes-binaries-managers/archive/0.2.1.tar.gz"
-  sha256 "993b931d1fb6a294b711b1785e822ca980362d9bfde07e51b5ea883bf7e856b9"
+  url "https://github.com/little-angry-clouds/kubernetes-binaries-managers/archive/0.2.2.tar.gz"
+  sha256 "7065c1d50829a5135f67f37b8cdd80699f74da6b01c9f8daf7e96d3fe6ebca1c"
 
   depends_on "go" => :build
 
