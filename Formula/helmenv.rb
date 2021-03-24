@@ -1,8 +1,8 @@
 class Helmenv < Formula
   desc "Helm version manager inspired by tfenv"
   homepage "https://github.com/little-angry-clouds/kubernetes-binaries-managers/"
-  url "https://github.com/little-angry-clouds/kubernetes-binaries-managers/archive/0.2.5.tar.gz"
-  sha256 "90de0b88585f11f6e136346c12d65e5e3a8ce175ea992b522a4e54f4fea3a358"
+  url "https://github.com/little-angry-clouds/kubernetes-binaries-managers/archive/0.2.6.tar.gz"
+  sha256 "4498452e7c6445ec5197e0dc431df459ee96b8f9a4564948af944740ffeab9b2"
 
   depends_on "go" => :build
 
