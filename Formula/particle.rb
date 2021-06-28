@@ -36,8 +36,6 @@ class Particle < Formula
   depends_on "kind" => :optional
 
   def install
-    ENV.prepend "CGO_ENABLED", "0"
-    system "go", "build", "-a", "-o", "particle.bin", "main.go"
-    bin.install "particle.bin" => "#{bin}/particle"
+    bin.install "particle"
   end
 end
