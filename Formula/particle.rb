@@ -5,29 +5,29 @@
 class Particle < Formula
   desc "Particle is a project designed to aid in the development and testing of Helm charts and other kubernetes manifests."
   homepage "https://github.com/little-angry-clouds/particle/"
-  version "0.0.4"
+  version "0.0.5"
   license "GPL3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.4/particle_0.0.4_darwin_amd64.tar.gz"
-      sha256 "d4cb86c1cd08c1cd07495740300db4c20b356eac55e48b43e1b5e18807f5e62d"
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.5/particle_0.0.5_darwin_amd64.tar.gz"
+      sha256 "6c9a88834869e56f189aebb0710b6b3e1b0d0517bfcdcdedb90fe274ac05a607"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.4/particle_0.0.4_linux_amd64.tar.gz"
-      sha256 "03c85b777906403e80038b60ba09363e69f61be100fa837b2af53a6478416917"
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.5/particle_0.0.5_linux_amd64.tar.gz"
+      sha256 "5efde14d0d088f02d08902f06a49610e078131cfa435dc7da57b2249779833cd"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.4/particle_0.0.4_linux_armv6.tar.gz"
-      sha256 "f9e27c54e6f601c7fae12cd8c4454c0fdf1c6a72a9e5034d21335b7254ae6bd2"
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.5/particle_0.0.5_linux_armv6.tar.gz"
+      sha256 "3d0022ff8fba69846cffbd21f6b92546e512a3ac1060593d8612f2c329330a28"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.4/particle_0.0.4_linux_arm64.tar.gz"
-      sha256 "bf10f3003b4f33fa627d4f0e56a778a6f2b7b804fc283f4bb8b826c4e7e637ab"
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.5/particle_0.0.5_linux_arm64.tar.gz"
+      sha256 "6590093659bf49cb7de94e99ed3c468f9ccebdeb192e97bf5d9079073e91bfbd"
     end
   end
 
