@@ -5,13 +5,21 @@
 class Particle < Formula
   desc "Particle is a project designed to aid in the development and testing of Helm charts and other kubernetes manifests."
   homepage "https://github.com/little-angry-clouds/particle/"
-  version "0.0.9"
+  version "0.0.10"
   license "GPL3"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.10/particle_0.0.10_darwin_arm64.tar.gz"
+      sha256 "896b9480664abe2cafb4692802b7086b6668b490d55a4fc0d85aacbc32da4e92"
+
+      def install
+        bin.install "particle"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.9/particle_0.0.9_darwin_amd64.tar.gz"
-      sha256 "70121b460abf3f09309ddb6f06b1fe316089812931969ce4c5ea89c05ef032fa"
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.10/particle_0.0.10_darwin_amd64.tar.gz"
+      sha256 "08a57779440415ede1eccfbb6aaa63dc95106eb535091cfb2eb38ad67e07ee04"
 
       def install
         bin.install "particle"
@@ -21,24 +29,24 @@ class Particle < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.9/particle_0.0.9_linux_armv6.tar.gz"
-      sha256 "60af276a1290efbee6edaca044647de958c04038e2b32aa5d4038dfa5bd02309"
-
-      def install
-        bin.install "particle"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.9/particle_0.0.9_linux_amd64.tar.gz"
-      sha256 "b96866e528c891ac38772479f04cc6cdbe13e9c8332b6c80a8814e05ad2ca905"
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.10/particle_0.0.10_linux_armv6.tar.gz"
+      sha256 "d85e0976885459dd04e35dbe8cec1cdf0e3035c6c3cbf899775d500bb9291f6f"
 
       def install
         bin.install "particle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.9/particle_0.0.9_linux_arm64.tar.gz"
-      sha256 "cbb73d6f1c1d29fe242ef32f536b843c3e725b529b931e666facb346bc6c01e7"
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.10/particle_0.0.10_linux_arm64.tar.gz"
+      sha256 "55634aba4f9235daa783c9860acc013b7bbf49a35eeda577f0a4cb658d6938ee"
+
+      def install
+        bin.install "particle"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/little-angry-clouds/particle/releases/download/v0.0.10/particle_0.0.10_linux_amd64.tar.gz"
+      sha256 "84344961595dd611a0c86600b70451218498ab7023fbcd75137efed40b49d782"
 
       def install
         bin.install "particle"
