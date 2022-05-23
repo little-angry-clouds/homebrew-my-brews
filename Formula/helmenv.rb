@@ -37,7 +37,7 @@ class Helmenv < Formula
     end
   end
 
-  on_darwin do
+  on_macos do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/little-angry-clouds/kubernetes-binaries-managers/releases/download/v1.0.0/kubernetes-binaries-managers_1.0.0_darwin_arm64.tar.gz"
       sha256 "ddaf850a3cad2a33ee1e9bfc42fd11f2c5ff98db3199b610efc0c785f6c0f6e7"
